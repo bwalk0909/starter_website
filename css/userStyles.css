@@ -1,3 +1,194 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+   body{
+   	font-size: 14px;
+   	font-family: 'Abel', sans-serif;
+   	background-color:#ADACB5;
+   	
+   }
+   .container {
+      max-width:1024px;
+      margin:0em auto;
+      border:1px solid red;
+      background-color: #D8D5DB;
+   }
+
+
+   main {
+      padding:1em 0em;
+      background-color: #EAE8FF;
+      float:left;
+      width:100%;
+   }
+
+   h2 {
+   	font-size: 2em;
+      color: #2D3142;
+   }
+
+   li strong {color:#2D3142;}
+
+/*** Navigation Styles ***/
+
+   nav {
+      background-color:#2D3142;
+      padding:1em;
+   }
+
+   nav img:first-child{
+      width:40px;
+      height:40px;
+      border-radius:20px;
+      overflow: hidden;
+      float:left;
+      margin-right:1em;
+
+   }
+
+   nav>ul>li {
+      display: inline-block;
+      list-style-type: none;
+      margin-right:1em;
+
+   }
+
+   nav>ul>li>a:link{
+      color:#ffffff;
+      padding:.5em;
+      border:1px solid orange;
+      border-radius: 4px;
+   }
+
+   nav>ul>li>a:visited{
+      color:#ffffff;
+      border:1px solid orange;
+      border-radius: 4px;
+   }
+
+   nav>ul>li>a:active,
+   nav>ul>li>a:focus,
+   nav>ul>li>a:hover{
+      color:#2D3142;
+      background-color:orange;
+   }
+
+   section{
+   width: 66%;
+   float:left;
+   padding:0em 1em;
+   }
+
+   section article p img:first-child {
+   float:left;
+   width:25%;
+   height: 25%;
+   padding:.25em;
+   border;1px solid #2D3142;
+   margin:0em 1em 1em 0em;
+}
+
+aside {
+   background-color: #B0D7FF;
+   padding:1em;
+   margin:0em 1em;
+   float:right;
+}
+
+aside h3 {
+   color:#2D3142;
+   font-weight:400;
+}
+
+aside ul{
+      list-style-type: none;
+      margin:0px;
+      padding: 0px;
+
+   }
+aside ul li {
+   display: inline;
+   float: left;
+   margin: 0;
+   text-align: center;
+}
+
+aside li img{
+      width:80px;
+      height:80px;
+      border-radius:20px;
+      overflow: hidden;
+      margin-right:1em;
+
+   }
+
+aside p a {
+   display: block;
+   float: left;
+   margin: 0 0 1em;
+   text-align: center;
+   width: 50%
+   text-transform:uppercase;
+}
+
+aside p a img{
+      width:100px;
+      height:100px;
+      border-radius:20px;
+      overflow: hidden;
+      margin-right:1em;
+      text-align: center;
+   }
+
+aside p a img.surly{
+      width:100px;
+      height:100px;
+      border-radius:20px;
+      overflow: hidden;
+      margin-right:1em;
+   }
+
+article {
+   padding:1em;
+   margin-bottom:1em;
+}
+
+article.summer {
+   background-color:yellow;
+}
+
+article.kitchen{
+   background-color:pink;
+}
+
+article figure img {
+   float:left;
+   
+}
+
+article figure img {
+   float:left;
+   margin-left:1em;
+}
+
+.clearfix:before,
+.clearfix:after {
+ content: "";
+ display: table;
+}
+
+footer {
+   background-color: #2D3142;
+   padding: 1em;
+   color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
