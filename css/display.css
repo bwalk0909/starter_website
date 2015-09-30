@@ -1,0 +1,64 @@
+#two {
+  .margin {
+     background-color: #ECCBD9;
+    /* margin: 10px; */ 
+      }
+      .padding {
+     background-color: #80FFE8;
+    /* padding: 10px; */ 
+      }
+      .inline-img {
+     /* margin: 20px; */
+    /* padding: 10px; */
+        border: 1px solid blue; 
+        background-color: red;
+/*        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 10px; */
+      }
+  
+    }
+    
+    #three {
+      .block { 
+    display: block;  /* not required! divs default to block*/
+      } 
+      .inline { 
+    /* display: inline; */
+      }
+      .inline-block { 
+    /*display: inline-block;*/
+/*toggle */
+  }
+  .none { 
+    display: none; /*toggle*/
+  }
+  .visibility {
+    /* visibility: hidden; */
+  }
+}
+
+#four {
+  .box.inline-block {
+    display: inline-block;
+    /* margin-left: 20px; */
+     /* vertical-align: bottom; */  /*toggle*/
+  }
+  .box.inline-block.two { 
+    height: auto; /*so its not 100px, toggle!*/
+  }
+  .three { vertical-align: top; }
+  .four { vertical-align: text-top; /* Align the top of the box with the top of the parent's content area */ }
+  
+  .five, .six { text-align: right;} /*check margin above*/
+}
+
+#five {
+  .box.border-box {
+    line-height: 1em;
+    box-sizing: content-box; /*the normal box model*/
+    box-sizing: border-box; /*now it's better!*/
+    margin: 10px; /* does margin remain the same */
+  }
+}

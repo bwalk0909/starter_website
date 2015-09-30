@@ -11,16 +11,21 @@
    .container {
       max-width:1024px;
       margin:0em auto;
-      border:1px solid red;
       background-color: #D8D5DB;
+      position:relative;
+      top:0px;
+      left:0px;
    }
 
 
    main {
       padding:1em 0em;
       background-color: #EAE8FF;
-      float:left;
+      /*float:left;*/
       width:100%;
+      position:relative;
+      top:75px;
+      left:0px;
    }
 
    h2 {
@@ -35,6 +40,9 @@
    nav {
       background-color:#2D3142;
       padding:1em;
+      position: fixed;
+      width:996px;
+      z-index: 4;
    }
 
    nav img:first-child{
@@ -74,26 +82,45 @@
       background-color:orange;
    }
 
+   /*nav>ul>li>a .button.has-click-effect { 
+   position: relative;
+   border-bottom: 2px solid black;
+   }
+
+   nav>ul>li>a button.has-click-effect:active {
+   bottom: -2px;
+   border-bottom: 0;
+   }*/
+
    section{
    width: 66%;
-   float:left;
+   /*float:left;*/
    padding:0em 1em;
+   position: relative;
+   top:0px;
+   left:0px;
    }
 
    section article p img:first-child {
-   float:left;
+   float:right;
    width:25%;
    height: 25%;
    padding:.25em;
    border;1px solid #2D3142;
    margin:0em 1em 1em 0em;
+
 }
 
 aside {
    background-color: #B0D7FF;
    padding:1em;
    margin:0em 1em;
-   float:right;
+   /*float:right;*/
+   position: absolute;
+   top:1em;
+   right:0em;
+   width:25%;
+
 }
 
 aside h3 {
@@ -152,6 +179,9 @@ aside p a img.surly{
 article {
    padding:1em;
    margin-bottom:1em;
+   position:relative;
+   top: 0px;
+   left: 0px;
 }
 
 article.summer {
@@ -182,6 +212,10 @@ footer {
    background-color: #2D3142;
    padding: 1em;
    color: #ffffff;
+   position: fixed;
+   bottom:0px;
+   width:996px;
+   z-index: 4;
 }
 
 

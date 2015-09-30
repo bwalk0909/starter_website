@@ -1,0 +1,106 @@
+<div>
+  <h1>Display and Box Sizing in CSS</h1>
+  <p>Why the topic?</p>
+  <ul>
+    <li>Display is the first thing to get right</li>
+    <li>You'll need to manage the relationship between display, float and position to really control layout and solve problems</li>
+    <li>Knowing your options with display can really help you be creative with CSS</li>
+  </ul>
+  <p id="toc"> Cut the fat, you need to know: </p>
+  <ol>
+    <li><a href="#one">block vs inline</a></li>
+    <li><a href="#two">Margin/Padding on inline elements</a></li>
+    <li><a href="#three">The four most common displays: inline, block, inline-block, none</a></li>
+    <li><a href="#four">Using inline-block to make horizontal image lists</a></li>
+    <li><a href="#five">Using box-sizing:border-box to change how margin/padding are calculated on block level elemnts</a></li>
+  </ol>
+</div>
+
+<div id="one">
+  <h2> Block vs inline</h2>
+  <p> This is probably the thing you first learned and totally glossed over, it's kind of the soul of basic HTML/CSS </p>
+  <p> You should be able to natively know what's a block and inline element... or at least have a good guess!</p>
+  <p>Inline Elements:</p>
+  <b>{< b > tag}</b>
+  <big>{< big> tag}</big>
+  <i>{< i > tag}</i>
+  <small>{< small > tag}</small>
+  <tt>{< tt >} tag</tt>
+  <abbr>{< abbr >} tag</abbr>
+  <acronym>{< acronym >} tag</acronym>
+  <code>{ < code > }</code>
+  <img src="http://cdn3.themovienetwork.com/sites/themovienetwork.com/files/imagecache/48x48/baby-mama-amy-poehler-tina-fey_754453.jpg"/>
+  <button>Press Me </button>
+  <input>Type in Me </input>
+  <select>Select Me</select>
+  <textarea>textarea</textarea>
+  <p> Block elements: </p>
+    <p> P tags, notice I get my own line? </p>
+    <h3>Headings h1, h2, h3, h4, h5</h3>
+</div>
+    
+<div id="two">
+  <h2>Margin and Padding on inline elements</h2>
+  <p> You should have some idea of how margin and padding are applied differently for block and inline elements</p>
+  <span>Span with no margin/padding</span>
+  <br/>
+  <span class="margin">Span with margin</span>
+  <br/>
+  <span class="padding">Span with padding</span><span class="padding">Another span with padding</span>
+  <br/>
+  <span class="margin padding">Span with margin and padding</span>
+  <br/>
+  <span>text before img</span>
+  <img class="inline-img" src="http://cdn3.themovienetwork.com/sites/themovienetwork.com/files/imagecache/48x48/baby-mama-amy-poehler-tina-fey_754453.jpg"/><span>text next to image</span>
+  <br/><br/><br/>
+</div>
+    
+<div id="three">
+  <h2>The four most common displays: inline, block, inline-block, none</h2>
+  <p>There are LOTS of values display can be, but honestly, it mostly ends up being these 4</p>
+  
+  <div class="box block">block</div>
+  <div class="box inline">inline </div>
+  <div class="box inline-block">inline-block</div>
+  <div class="box none">Disp None</div>
+  <div class="box visibility">Not on page</div>
+</div>
+    
+<div id="four">
+  <h2>Using inline-block to make horizontal image lists</h2>
+  <p>It can be a good alternative to float. In fact it's quickly becoming the industry standard instead of float.</p>
+  <div class="box inline-block">inline-block</div>
+  <div class="box inline-block">inline-block</div>
+  <div class="box inline-block">inline-block</div>
+  <div class="box inline-block">inline-block</div>
+  
+  <p>Let's see a row with variable height content, the vertical-align property will come into play here 
+    <a href="http://www.w3.org/wiki/CSS/Properties/vertical-align">The w3 spec on vertical-align propreties</a>
+  </p>
+  
+  <div class="box inline-block one">inline-block</div>
+  <div class="box inline-block two">
+    <div style="width: 80%; margin: 0 auto; background-color: #ECCBD9;">inline block</div>
+  </div>
+  <div class="box inline-block three">inline-block</div>
+  <div class="box inline-block four">inline-block</div>
+  <p> Inline-block elements can use text-align on themselves (below the blocks have text-align: right;), note however that they all keep a slight space between them (that's not margin/padding), we can eliminate that by keeping the tags on the sameline (this is an issue with inline elements, remeber, text elements get a space when rendered)
+  <div class="box inline-block five">IB  5</div><div class="box inline-block six">IB  6</div>
+</div>
+    
+<div id="five">
+  <h2>Using box-sizing:border-box to change how margin/padding are calculated on block level elemnts</h2>
+  <p>This is something that can be VERY useful, but is kind of obscure!</p>
+  <p>When you get into responsive design, you might find yourself using this a lot!<p>
+  <div class="box">normal</div>
+  <div class="box border-box">border-box</div>
+  <p> notice above how with border-box it's just completely 100px across, it doesn't get it's extra 30px of padding like normal</p>
+
+
+<!-- TODO: Cannonical use case or horizontal nav -->
+
+
+<!-- IN CLASS EXERCISE: -->
+  <!-- GIVE EVERY ELEMENT DISPLAY: NONE, INLINE, BLOCK, INLINE-BLOCK -->
+  <!-- USE DISPLAY: INLINE-BLOCK TO MAKE ELEMENTS IN A ROW -->
+  <!-- Switch it up with box-sizing: border-box, give everything a width, padding and margin -->
