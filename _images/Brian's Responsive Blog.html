@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///Users/Brian/Desktop/responsive/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Brian's Responsive Blog</title>
+<link src="css/responsive.css" type="css/stylesheet">
+</head>
+<body>
+<div>
+  <h1>Responsive Design</h1>
+  <p>Why responsive design?</p>
+  <ul>
+    <li>Mobile is eating software, and the least thing you can do is make your site navigable and readable on a phone's browser</li>
+    <li>People shop on iPad's dammit! Support that browser!</li>
+    <li>Conversion rates, converstion rates, converstion rates</li>
+    <li>Pssst! A hidden theme of this lesson is that you set width way more than you set height!</li>
+  </ul>
+  <p id="toc"> Cut the fat, you need to know: </p>
+  <ol>
+    <li><a href="file:///Users/Brian/Desktop/responsive/index.html#one">Using percentages and other units instead of fixed values</a></li>
+    <li><a href="file:///Users/Brian/Desktop/responsive/index.html#two">Using min and max widths</a></li>
+    <li><a href="file:///Users/Brian/Desktop/responsive/index.html#three">box-sizing to get consistent padding</a></li>
+    <li><a href="file:///Users/Brian/Desktop/responsive/index.html#four">A simple 3 column responsive grid with responsive marings</a></li>
+    <li><a href="file:///Users/Brian/Desktop/responsive/index.html#five">Responsive Images </a></li>
+  </ol>
+</div>
+
+<div id="one">
+  <h2> Using percentages and other units instead of fixed values </h2>
+  <p> This is the biggest part of responsive design really, it automatically makes so much responsive. </p>
+  <!-- Percentages -->
+  <p>First and foremost, use percentages</p>
+  <p>These are percentages of the parents values! (50% height means 50% of parents height)</p>
+  <div class="box">100px</div>
+  <div class="box responsive">100% Width</div>
+  <div class="box half-width">50% width</div>
+  <!-- vw units, resize the browser and see their behavior -->
+  <p>Secondly, you can use vw units, I find their behavior a bit more odd, and less useful then the parent based widths of percent </p>
+  <p> One use case where these can be good is a screen covering modal </p>
+  <div class="box vw">100vw unit </div>
+  <div class="box halfvw">50vw unit</div>
+  <div class="box vwmin">75 vwmin</div>
+  <div class="box vwmax">50 vwmin; 1vmax = 1vw or 1vh, whichever is largerr</div>
+  <!-- Height -->
+  <p>Height is a different beast, remember we often want to have height be dependent on it's children, not really be fixed height</p>
+  <div class="box fixedHeight">200px high</div>
+  <p>The div below will only set a height based on percent if it's parent, the #one div has a fixed height, so if we do that in CSS, watch it change. However, notice now most of our content is overflowing! In this case it doesn't matter, but what if #one has a background-color?
+  </p><div class="box percentageHeight">50% high </div>
+  <div class="box vwHeight">50vw height</div>
+</div>
+
+<div id="two">
+  <h2>Using min and max widths</h2>
+  <p>min and max-widths are complimentary to percentage based design</p>
+  <p>The idea is simple, sometimes content needs to always be at least a minimum width, and sometimes it shouldn't grow beyond a certain width, and sometimes both apply</p>
+  <!-- min-width -->
+  <div class="styledbox min-width">
+    my min-width is 600px! I have a width of 100% but I won't shrink below 600px
+  </div>
+  <div class="styledbox max-width">
+    I'll never go above 450px! try as you might, but I can go less!
+  </div>
+  <div class="styledbox min-and-max">
+    I have both a min and max width!
+  </div>
+</div>
+
+<div id="three">
+  <h2>box-sizing to get consistent padding</h2>
+  <p> You might noticed one thing, but let's study it explicitly:</p><p>
+  </p><p>In the current box model, widths of 100% with extra padding OVERFLOW the page, let's take a look:</p>
+  <div class="styledbox overflow">I'm a div that overflows the page</div>
+  <p> This can cause all sorts of problems! But we often run into a scenario where we want padding to be a fixed value of 10, 15, 50px, but the rest of the content to be a certain percentage width, this is wehre box-sizing: border-box comes into play! But first, another bad example </p>
+  <!-- bad example -->
+  <!-- we want 15px padding but the boxes to be 1/3 of the page, this causes box 3 to flow below in error! -->
+  <div class="styledbox oneThirdWrong">1/3</div><div class="styledbox oneThirdWrong">2/3</div><div class="styledbox oneThirdWrong">3/3</div>
+  
+  <p> Now let's see it done right! </p>
+  <!-- done right! via border-box -->
+  <div class="styledbox oneThirdRight">1/3</div><div class="styledbox oneThirdRight">2/3</div><div class="styledbox oneThirdRight">3/3</div>
+</div>
+
+<div id="four">
+  <h2>A simple 3 column responsive grid with responsive marings</h2>
+  <p>You should know how to do this, it combines percentage widths and margins, and the first-child selector </p>
+  <p> this is just one of many ways! Play around with others </p>
+  
+  <div class="styledbox oneThirdCol">1/3 column </div>
+  <div class="styledbox oneThirdCol">1/3 column </div>
+  <div class="styledbox oneThirdCol">1/3 column </div>
+  <div class="styledbox oneThirdCol">1/3 column </div>
+  <div class="styledbox oneThirdCol">1/3 column </div>
+  <div class="styledbox oneThirdCol">1/3 column </div>
+</div>
+  
+<div id="five">
+  <h2>Responsive Images </h2>
+  <p>The idea is simple, style images so they scale and always stay the proper aspect ratio, and don't move contort or look squished/stretched, this is especially useful if the image is very very large, like the one I have below</p>
+  <p> I actually break my NO BOOTSTRAP rule here, and apply the same styling they do to their image class</p>
+  
+  <!--Responsive Image contained within a 500px block-->
+  <div class="imgContainer">
+    <img class="responsiveImage" src="./Brian's Responsive Blog_files/sunflower_girls.jpg">
+  </div>
+  
+  <!--non-responsive image, uncomment to see it-->
+  <!--<img src="https://volcanocafe.files.wordpress.com/2013/10/yellowstone-fountain.jpg" />-->
+  
+</div>
+
+
+</body></html>

@@ -1,0 +1,56 @@
+
+// 3.Write a third version of the function where the user can //specify how many sides the dice has
+
+function rollDice(sidedDice, numberOfDice) {
+  // Math.floor(Math.random()*sidedDice) done numberOfDice times...
+}
+
+// examples of using the function
+
+rollDice(6, 4);  //a classic 6-sided die
+//logs out: dice 1 is 6, dice 2 is 4, dice 3 is 1, dice 4 is 2
+
+rollDice(10, 2); //a 10-sided die
+//logs out: dice 1 is 8, dice 2 is 7
+
+
+/* 4Write a fourth version, where if the user supplies a sidedDice that doesn't exist (there are no 7 sided dice for example), the user gets a notification that it doesn't exist. For the record, the sides of dice that exist are 2 (a coin), 4-sided (triangle shaped), 6, 8, 10, 12, 20 */
+
+
+function rollDiceWithChecking(sidedDice, numberOfDice) {
+  // code to check if sidedDice is a valid die
+  // Math.floor(Math.random()*sidedDice) done numberOfDice times...
+}
+
+rollDiceWithChecking(6, 2);
+//logs out: dice 1 is 5, dice 2 is 4
+
+rollDiceWithChecking(7, 4);
+//logs out: "There are no 7-sided dice, certainly not 4 of them!"
+
+rollDiceWithChecking(9, 5);
+//logs out: "There are no 9-sided dice, certainly not 5 of them!"
+
+/* 5 Write a fifth version that checks if a critical strike or critical fail is rolled. A critical stirke is if on a d20 (and d20 only), a 20 is rolled, a critical fail is if a 1 is rolled (also only a d20). The code should seem kinda hacky and poorly written, why? because you're handling an edge case for just one of your dice. */
+function rollDiceCriticalStrike(sidedDice, numberOfDice) {
+  //code to check if sided dice is valid
+  // Math.floor(Math.random()*sidedDice) done numberOfDice times...
+  // log out each value, but if a d20 and is 20 or 1 log out extra info
+}
+
+// examples of using the function
+
+rollDiceCriticalStrike(20, 3);
+//logs out: 
+//dice 1 is 20, critical strike!
+//dice 2 is 15
+//dice 3 is 18
+
+rollDiceCriticalStrike(20, 1);
+//logs out: 
+//dice 1 is 1, critical fail!
+
+rollDiceCriticalStrike(20, 2);
+//logs out: 
+//dice 1 is 20, critical strike!
+//dice 2 is 20, critical strike!

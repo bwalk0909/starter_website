@@ -1,0 +1,158 @@
+/* **********
+   EXAMPLE 1
+   ********** */
+
+
+// Hi There! i'm a lesson on functions, kind of the basic unit of operation in Javascript...
+
+// Functions in Javascript can be defined in two ways
+
+// helloWorld(); 
+// helloWorld();
+// helloWorld();
+
+function helloWorld() {   
+  console.log('hello!');
+}
+
+var helloWorld2 = function() {
+  console.log('hello world2!');
+};
+
+// helloWorld2(); //samesies!
+
+// What's the difference? It's simple, try and call each one ABOVE the declarations
+
+// Run it and you'll see that helloWorld is defined but helloWorld2 isn't defined! Otherwise they're almost exactly the same in behavior!
+
+// You might ask now, "Why even bother with the var format of defining a function? Well it actually allows us to pass around the function easer, which we'll see later. The moral right now is, both are good! Don't ignore one!
+
+// *********
+// EXERCISE:
+// Try it now, write a function in both ways and then call them above, then below the declarations, see what happens
+
+
+
+
+/* **********
+   EXAMPLE 2
+   ********** */
+
+// functions can take argmuents, anything can be provided as an argument into a JS function, you just need to tell it to look for something
+
+function addEmUp(a, b) {
+  console.log(a);
+  console.log(b);
+  var result = a + b;
+  console.log(result);
+}
+
+// addEmUp(1,2,3);
+
+// JS tries to be friendly though, you can pass in anything as 'a' and 'b' and it will attempt to add them, sometimes it works...
+
+// addEmUp('hello ', 'world!');
+
+// sometimes it works not quite how you'd suspect...
+
+// addEmUp(3, "a cool string");
+
+// the result of hte above is kind of one reason people HATE Javascipt, why the hell when you add a number and a string you get a string??
+
+// addEmUp('a cool string', 3);
+
+// You can actually pass in more or less arguments than the function is defined to have, and JS just tries to make the best of it.
+
+// addEmUp(1);
+
+// addEmUp('lonely string');
+
+// Wow, NaN and "lonely stringundefined", that's kinda crummy output. Some people are annoyed the language dosen't give an explicit error, but instead just returns a fudged answer... I like it but again, some don't
+
+// basically every variable that's not provided by us, ends up being defined as 'undefined', let's show this more explicitly
+
+function addEmUpWithLogging(a, b) {
+  console.log('a is: ', a);
+  console.log('b is: ', b);
+  var result = a + b;
+  console.log(result);
+}
+
+// addEmUpWithLogging(1, 2);
+// addEmUpWithLogging(1);
+// addEmUpWithLogging('a crummy string');
+// addEmUpWithLogging(undefined, 'value of b');
+
+// and 'undefined' plus other things is unpredictable!
+
+
+
+/* **********
+   EXAMPLE 3
+   ********** */
+
+// finally, let's look at what you can name functions in Javascript, the answer is: (almost) anything!
+
+function asskekf(a, b) {
+  console.log(a + b);
+} 
+
+function ಠ_ಠ(a, b) {
+  console.log(a + b);
+}
+
+function $(a, b) {
+  console.log(a + b);
+}
+
+function Ωç(a, b) {
+  console.log(a + b);  
+}
+
+
+// ಠ_ಠ(5,4);
+// $(4,5); //you'll be seeing this soon!
+// Ωç(4,5);
+
+
+// *********
+// EXERCISE:
+// Write a function that takes your year of birth, subtracts it from the current year to get your age! Then try calling it witout an argument like above, and then with different arguments like strings
+
+
+function yourAge(year_of_birth) {
+  var current_year = 2015;
+  var your_age = current_year - year_of_birth;
+  console.log(your_age);
+}
+
+function yourAge2(year_of_birth, future_year) {}
+
+// yourAge(1985);
+// yourAge('1985'); // why does this work?
+// yourAge('Nineteen Eighty Five');
+// yourAge([]); // an empty array! why is it essentially made 0?
+
+function yourFutureAge(future_year, year_of_birth) {
+  console.log('In the year ' + future_year + ' you will be ' + (future_year - year_of_birth));
+}
+
+// yourFutureAge(2050, 1985);
+
+// *********
+// EXERCISE:
+
+// Write a function that converts fahrenheit to celsius for a starting temperature, a final temperature and a step amount in between
+
+function fahrenheitToCelsius(start, end, step) {
+  for (var i = start; i <= end; i = i + step) {
+    var celsius = (i - 30) / 2;
+    var output = i + 'F in celsius is ' + celsius + 'C';
+    console.log(output);
+  }
+}
+
+fahrenheitToCelsius(32, 100, 10);
+
+
+
