@@ -245,14 +245,14 @@ section{
    width:60%;
    padding:1em;
    float:left;
-   margin-left;
+   margin-left:1em;
    }
 
    aside {
    width:30%;
    padding:1em;
    float:right;
-   margin-right:1em;
+   margin-right:0em;
    }
 }
 
