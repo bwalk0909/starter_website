@@ -243,14 +243,16 @@ footer {
 
 section{
    width:60%;
-   padding:0em 1em;
+   padding:1em;
    float:left;
+   margin-left;
    }
 
    aside {
    width:30%;
-   padding:0em 1em;
+   padding:1em;
    float:right;
+   margin-right:1em;
    }
 }
 
