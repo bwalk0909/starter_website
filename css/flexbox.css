@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   body{
+   	font-size: 14px;
+   	font-family: 'Abel', sans-serif;
+   	/*background-color:#ADACB5;*/
+      background-color: #ffffff;
+   	
+   }
+   .container {
+      /*max-width:1024px;*/
+      max-width:100%;
+      margin:0em auto;
+      background-color: #D8D5DB;
+      position:relative;
+      top:0px;
+      left:0px;
+   }
+
+
+  .flex-container-one {
+      display:flex;
+      width:50%;
+      margin: 0 auto;
+      padding: 15px;
+      background-color: orange;
+      margin-bottom:1em;
+  }
+
+  .flex {
+   min-height: 75px;
+   margin: 2.5%;
+   width: 20%;
+   background-color: red;
+  }
+
+  .direction {
+   display:flex;
+   flex-direction:column;
+   flex-direction:row;
+  }
+
+  .wrap {
+   display:flex;
+   flex-wrap: no-wrap;
+  /* flex-wrap: wrap;*/
+}
+  .justify {
+   display:flex;
+   /*justify-content:flex-start;*/
+   /*  justify-content:flex-end;*/
+   justify-content:center;
+  }
+
+.flex-container-one.align {
+   height:400px;
+}
+
+   .align {
+      dislay:flex;
+      justify-content:center;
+      align-items:center;
+   }

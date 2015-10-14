@@ -75,3 +75,86 @@
 // celciusToFahrenheit (100, 32, 10);
 
 
+//calculate Age
+// function yourAge(year_of_birth) {
+// 	console.log(2015 - year_of_birth);
+// }
+
+// function calculateAge(year_of_birth) {
+// 	return 2015 - year_of_birth;
+// }
+
+// calculateAge(1985);
+
+// var myAge = calculateAge(1985);
+// var myBrothersAge = calculateAge(1980);
+
+
+
+//Scope in Functions
+
+// function my_own_scope() {
+// 	var in_function_scope_1 = 'log me here I will work!'
+// 	var name = 'Brian';
+// }
+
+
+function first_scope() {
+
+	var first_quote = 'It was the best of times...';
+
+	function second_scope() {
+
+	var second_quote = 'It was the worst of times...';
+
+	console.log(first_quote + second_quote);
+	}
+
+second_scope(); // this is the only one that will work.
+
+// console.log(second_quote);
+}
+
+first_scope();
+
+// console.log(first_quote + second_quote);
+
+// recurtion
+
+function recur() {
+	console.log('Hi I am Recur');
+	var d20Roll = Math.floor(Math.random()*20);
+	if (d20Roll === 15) {
+		return;
+	} else {
+		recur();
+	}
+}
+
+recur();
+
+function diceRoll() {
+	var name = 
+}
+
+
+
+
+
+
+
+
+// console.log(myAge);
+// console.log(myBrothersAge);
+// // functions should always be sure to include a return value
+
+// function futureAge(future_year, year_of_birth) {
+// 	return future_year - year_of_birth;
+// }
+
+// var myAgeIn2050 = futureAge (2050, 1985);
+// var myAgeIn2065 = futureAge (2065, 1985);
+// var myAgeIn1987 = futureAge (1987, 1985);
+
+
+
