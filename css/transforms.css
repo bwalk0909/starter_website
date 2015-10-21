@@ -1,0 +1,61 @@
+.box {
+   display: block;
+   padding:15px;
+   background-color:blue;
+   width:100px;
+   height:100px;
+   border-radius: 4px;
+   margin:1em;
+   float:none;
+   text-align:center;
+   line-height: 75px;
+   color:#ffffff;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.rotate {
+  margin:25px;
+  transform: rotate(45deg);
+}
+
+.translate-X {
+  transform: translateX(55px);
+}
+
+.skewed-text{
+ transform:skew(50deg, 2deg);
+}
+
+.top-left-start {
+  margin-left:100px;
+  transform-origin:top left;
+}
+
+.skewed-box {
+  transform:rotate (10deg);
+  transform-origin:bottom right;
+}
+
+.perspective-alone {
+  transform:perspective(100px);
+}
+.perspective-rotate-high {
+  transform:perspective(100px) rotateX(20deg);
+}
+
+.perspective-rotate-low {
+  transform:perspective(100px) rotateX(80deg);
+}
+
+.full-rotate:hover{
+  animation :full-rotate 5s infinite;
+}
+
+@keyframes full-rotate {
+  from {transform: perspective(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    to {transform: perspective(100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);}
+    /*remove rotateX and rotateY to get box to rotate in place*/
+}
+
+
+

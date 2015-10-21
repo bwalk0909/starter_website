@@ -1,0 +1,85 @@
+body {margin:0 auto;}
+
+.box {
+   display: block;
+   padding:15px;
+   background-color:blue;
+   width:100px;
+   height:100px;
+   border-radius: 4px;
+   margin:1em;
+   float:left;
+   text-align:center;
+   line-height: 75px;
+   color:#ffffff;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+@keyframes moveAroundAndJunk {
+  0% {top:0; left:0; background-color:red;}
+  25% {top:0; left:100px; background-color:green;}
+  50% {top:100px; left:100px; background-color:red;}
+  70% {top:100px; left:0px; background-color:yellow; color:black;}
+  100% {top:0; left:0; background-color:red;}
+}
+
+
+@keyframes border-radius {
+  from {border-radius: 0;}
+  to {border-radius:50;}
+}
+
+@keyframes wiggle {
+  25% {left:5px;}
+  50% {left:0;}
+  75% {left:-5px;}
+  100% {left:0;}
+}
+
+@keyframes actuallyShrinks {
+  from {font-size:8px;}
+  to {font-size: 24px;}
+}
+
+.animated-box {
+  position: relative;
+  top:0; left: 0;
+  animation: moveAroundAndJunk 4s ease-in-out;
+  z-index: -1;
+}
+
+.endless-wiggle {
+  animation: wiggle 2s;
+  position: relative;
+  left:0;
+  animation-iteration-count:infinite;
+}
+
+.shrinking-text {
+animation: actuallyShrinks 3s;
+animation-direction: reverse; /*also try normal and alternate*/
+animation-iteration-count:infinite;
+}
+.reveal-photo  {
+  width: 250px;
+  overflow: hidden;
+  position: relative;
+}
+.reveal-photo img {
+  max-width: 100%;
+}
+
+.hider {
+  width: 100%s;
+  height:100%;
+  position: absolute;
+  overflow: hidden;
+  top:0;
+  left:0;
+  background-color:black;
+  opacity: .8;
+  animation:slide-down 10s linear;
+  animation-iteration-count:infinite;
+
+}
